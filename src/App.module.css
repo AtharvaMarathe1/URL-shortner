@@ -1,0 +1,29 @@
+body{
+    background: #D3C5E5;
+    font-family: Century Gothic;
+
+    /* display: flex; */
+
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.l1{
+    margin: 100px;
+    font-size: x-large;
+}
+
+.container a:hover,
+.container a:active{
+    color: var(--color-primary-800);
+}
+
+.container a{
+    text-decoration: none;
+}

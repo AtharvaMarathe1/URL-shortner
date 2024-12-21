@@ -1,0 +1,48 @@
+.text{
+    font-family: Century Gothic;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    position: absolute;
+    top:200px;
+}
+
+.text1{
+    font-size: large;
+}
+.text2{
+    position: relative;
+    font-size: 25px;
+    top: 18px;
+}
+
+#inpp{
+    position: relative;
+    border-radius: 10px;
+    height: 50px;
+    border-style: none;
+    top: 15px;
+    width: 250px;
+    background-color: #927dc3;
+}
+
+
+button {
+    position: relative;
+    top: 43px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff; /* White text */
+    background-color: #907ac5; /* Green background */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #735DA5; /* Darker green on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
