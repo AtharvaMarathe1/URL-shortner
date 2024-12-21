@@ -4,7 +4,8 @@ import styles from "./homePage.module.css"
 
 const UrlMain = () => {
     const [input, setInput] = useState("");
-    const [short, setShort] = useState("");
+    const [shorte, setShort] = useState("");
+    const [code, setCode] = useState("");
     // const [show, setShow] = useState(false);
 
     const handleSubmit = async (e) => {
@@ -25,20 +26,21 @@ const UrlMain = () => {
     
           const postJson = await postResponse.json();
           console.log("POST RESP", postJson);
-        //   const sh = postJson.short;
+          const sh = postJson.short;
+          setCode(postJson);
          
 //
-        // const getUrl = `https://urlshortner-backend-dmn3.onrender.com/${sh}`;
+        const getUrl = `https://urlshortner-backend-dmn3.onrender.com/${sh}`;
         
-        //   const response = await fetch(getUrl);
-        //   if (!response.ok) {
-        //     throw new Error(`Response status: ${response.status}`);
-        //   }
+          const response = await fetch(getUrl);
+          if (!response.ok) {
+            throw new Error(`Response status: ${response.status}`);
+          }
         
-        //   const json = await response.json();
-
-          setShort(postJson.short);
-          console.log(postJson);
+          const json = await response.json();
+          console.log(json);
+          setShort(json)
+          // setShort(postJson.short);
         } catch (error) {
           console.error(error.message);
         }
@@ -60,10 +62,12 @@ const UrlMain = () => {
             </div>
             <button onClick={handleSubmit}>Submit</button>
 
-            {short  && (
+            {shorte  && code && (
                 <div className={styles.shorten}>
                     <h2 className={styles.text3}>Shortened URL: </h2>
-                    <a href={`https://urlshortner-backend-dmn3.onrender.com/${short}`} target="_blank">{short}</a>
+                    {/* console.log({short.url}); */}
+                    
+                    <a href={`https://www.yugagarwal.tech/s/${code?.short}`} target="_blank">https://www.yugagarwal.tech/s/{code?.short}</a>
                 </div>
             )}
         </div>
