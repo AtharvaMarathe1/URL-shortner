@@ -61,8 +61,8 @@ const UrlMain = () => {
             <button onClick={handleSubmit}>Submit</button>
 
             {short  && (
-                <div>
-                    <h2>Shortened URL: </h2>
+                <div className={styles.shorten}>
+                    <h2 className={styles.text3}>Shortened URL: </h2>
                     <a href={`https://urlshortner-backend-dmn3.onrender.com/${short}`} target="_blank">{short}</a>
                 </div>
             )}

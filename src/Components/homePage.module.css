@@ -46,3 +46,14 @@ button:hover {
     background-color: #735DA5; /* Darker green on hover */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
+.shorten{
+
+    position: relative;
+    top: 60px;
+    /* right: 100px; */
+}
+
+.text3{
+    font-size: 30px;
+}
